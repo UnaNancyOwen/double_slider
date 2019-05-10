@@ -2,8 +2,22 @@ Double Slider Trackbar based on CVUI
 ====================================
 This repository is experimental implementation of double slider tarckbar based on cvui.  
 The cvui.h that included in this repository is additionally implemented based on cvui 2.7.0.  
+(NOTE: This function has not been fully tested yet.)  
 
-![double_slider](double_slider.gif)
+![double_slider](double_slider.gif)  
+
+How To Use
+----------
+```cpp
+// Double Slider Trackbar
+int32_t value_min = 0;
+int32_t value_max = 255;
+cvui::trackbar( ui_canvas, ui_origin.x, ui_origin.y, trackbar_length, &value_min, &value_max, trackbar_min, trackbar_max );
+```
+
+The move method of this indicator is a little different from general operation.  
+If you want move min value indicator, Please drag with keep press down the left mouce button.  
+If you want move max value indicator, Please drag with keep press down the right mouce button.  
 
 Environment
 -----------
